@@ -5,4 +5,24 @@ class DiceController < ApplicationController
     @second = vals.sample
     render({ :template => "view_layouts/twosix"})
   end
+  def twoten
+    vals = (1..10).to_a
+    @first = vals.sample
+    @second = vals.sample
+    render({ :template => "view_layouts/twoten"})
+  end
+  def onetwenty
+    vals = (1..20).to_a
+    @first = vals.sample
+    render({ :template => "view_layouts/onetwenty"})
+  end
+  def fivefour
+    vals = (1..4).to_a
+    @first = vals.sample
+    @second = vals.sample
+    @third = vals.sample
+    @fourth = vals.sample
+    @fifth = vals.sample
+    render({ :template => "view_layouts/fivefour"})
+  end
 end
